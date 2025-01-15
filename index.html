@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #container {
+          max-width: 1200px;
+          width: 100%;
+          margin: 0 auto;
+  
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 30px;
+        }
+  
+        .card {
+          width: 30%;
+          border: 1px solid black;
+          padding: 20px;
+          border-radius: 10px;
+        }
+        #form {
+          width: 600px;
+          margin: 50px auto;
+          border: 1px solid gray;
+          padding: 30px;
+  
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+        }
+  
+        #form * {
+          padding: 10px;
+          border: 1px solid black;
+          border-radius: 10px;
+        }
+      </style>
+    </head>
+    <body>
+      <form id="form">
+        <input type="text" id="name" placeholder="enter name..." />
+        <input type="text" id="price" placeholder="enter price..." />
+        <textarea id="description" placeholder="enter description..."></textarea>
+        <button id="btn">Save</button>
+      </form>
+      <div id="container"></div>
+
+      
+    <div id="timer">0</div>
+    <button id="start">Start</button>
+    <button id="stop" disabled>Stop</button>
+    <button id="reset" disabled>Reset</button>
+
+
+    <div id="color-container"></div>
+    <p id="text">Matn rangi o'zgaradi</p>
+    <p id="current-color">Hozirgi rang: qora</p>
+  
+
+    
+    
+    <script src="app.js"></script>
+</body>
+</html>
