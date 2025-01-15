@@ -151,3 +151,34 @@ colors.forEach(color => {
 
   colorContainer.appendChild(div);
 });
+
+
+
+
+
+
+const qidiruvInput = document.getElementById('kategoriya-qidiruv');
+const filtrlaTugma = document.getElementById('filtrla');
+const qaytaTugma = document.getElementById('qayta');
+const rasmlar = document.querySelectorAll('.rasm-konteyner');
+filtrlaTugma.onclick = function () {
+    const qidiruvMatni = qidiruvInput.value.trim().toLowerCase();
+
+    rasmlar.forEach(rasm => {
+        const kategoriya = rasm.dataset.kategoriya.toLowerCase();
+
+        if (kategoriya.includes(qidiruvMatni)) {
+            rasm.style.display = 'block';
+        } else {
+            rasm.style.display = 'none';
+        }
+    });
+};
+
+
+qaytaTugma.onclick = function () {
+    qidiruvInput.value = '';
+    rasmlar.forEach(rasm => {
+        rasm.style.display = 'block';
+    });
+};
